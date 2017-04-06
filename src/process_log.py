@@ -39,7 +39,7 @@ for i in range(logsize):
 [sortlist, sort_ind, sort_inv, sort_counts] = np.unique(hostlist, return_index=True, return_inverse=True, return_counts=True)
 sortkeys = np.argsort(sort_counts)
 
-output = [hostlist[i] for i in sortkeys[-11:-1]]
+output = [sortlist[i] for i in sortkeys[-11:-1]]
 output_cts = sortkeys[-11:-1]
 
 for k in range(10):
